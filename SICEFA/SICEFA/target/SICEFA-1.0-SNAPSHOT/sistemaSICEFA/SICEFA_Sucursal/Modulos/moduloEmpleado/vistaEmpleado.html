@@ -1,0 +1,257 @@
+
+<div class="container-fluid row d-flex justify-content-md-center rounded-4 mt-3" style="background-color: #b0c6dd;">
+    <link href="../../../../Estilos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    
+<p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <div class="col-11 rounded-3 py-3" style="background-color: #ffffff">
+
+            <!-- Formulario de registro de empleados -->
+            <center><h5 class="border-bottom border-light-subtle border-3 pb-3 px-2">Registro de Empleados</h5></center>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="empleadoForm">
+
+
+                        <div class="form-group">
+    <label for="nombre1" class="mt-2">Nombre:</label>
+    <input type="text" id="nombre1" name="nombre" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="apellido-paterno1" class="mt-2">Apellido Paterno:</label>
+    <input type="text" id="apellido-paterno1" name="apellido-paterno" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="apellido-materno1" class="mt-2">Apellido Materno:</label>
+    <input type="text" id="apellido-materno1" name="apellido-materno" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="genero1" class="mt-2">Género:</label>
+    <select id="genero1" name="genero" class="form-control w-100" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="fecha-nacimiento1" class="mt-2">Fecha de Nacimiento:</label>
+    <input type="date" id="fecha-nacimiento1" name="fecha-nacimiento" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="rfc1" class="mt-2">RFC:</label>
+    <input type="text" id="rfc1" name="rfc" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="curp1" class="mt-2">CURP:</label>
+    <input type="text" id="curp1" name="curp" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="foto1" class="mt-2"><i class='fas fa-file-image'></i> Foto:</label>
+    <input type="file" id="foto1" name="foto" class="form-control w-100" onchange="mostrarFoto()">
+</div>
+<div class="form-group">
+    <label for="domicilio1" class="mt-2">Domicilio:</label>
+    <input type="text" id="domicilio1" name="domicilio" class="form-control w-100" required>
+</div>
+</form>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+    <label for="codigo-postal1" class="mt-2">Código Postal:</label>
+    <input type="number" id="codigo-postal1" name="codigo-postal" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="ciudad1" class="mt-2">Ciudad:</label>
+    <input type="text" id="ciudad1" name="ciudad" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="estado1" class="mt-2">Estado:</label>
+    <input type="text" id="estado1" name="estado" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="telefono1" class="mt-2">Teléfono:</label>
+    <input type="number" id="telefono1" name="telefono" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="fecha-ingreso1" class="mt-2">Fecha de Ingreso:</label>
+    <input type="date" id="fecha-ingreso1" name="fecha-ingreso" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="puesto1" class="mt-2">Puesto:</label>
+    <select id="puesto1" name="puesto" class="form-control w-100" required>
+        <option value="Gerente">Gerente</option>
+        <option value="Atencion-clientes">Atención a Clientes</option>
+    </select>
+</div>
+<div class="form-group">
+    <label for="salario-bruto-mensual1" class="mt-2">Salario Bruto Mensual:</label>
+    <input type="number" id="salario-bruto-mensual1" name="salario-bruto-mensual" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="email1" class="mt-2">Email:</label>
+    <input type="email" id="email1" name="email" class="form-control w-100" required>
+</div>
+<div class="form-group">
+    <label for="codigo-empleado1" class="mt-2">Código Empleado:</label>
+    <input type="text" id="codigo-empleado1" name="codigo-empleado" class="form-control w-100" readonly>
+</div>
+</div>
+</div>
+
+
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-outline-success rounded-pill px-4 mx-2" onclick="addEmpleado()"><i class="fas fa-save"></i> Agregar</button>
+                <button type="button" class="btn btn-outline-info rounded-pill px-4 mx-2" onclick="updateEmpleado()" id="btnModificar"><i class="fas fa-edit"></i> Modificar</button>
+                <button type="reset" class="btn btn-outline-secondary rounded-pill px-4 mx-2" onclick="clean()"><i class='fas fa-eraser'></i> Limpiar</button>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <div class="d-flex justify-content-between">
+                <label for="filtroEmpleados" class="col-form-label fw-semibold">Filtrar por Estatus:</label>
+                <select id="filtroEmpleados" class="form-select" onchange="filterEmpleados()">
+                    <option value="Activo">Activos</option>
+                    <option value="Inactivo">Inactivos</option>
+
+                </select>
+
+                <button type="button" class="btn btn-primary btn-sm mx-1" onclick="mostrarTodosEmpleados()"><i class='fas fa-redo'></i> Actualizar/Mostrar Todos</button>
+
+                <input class="form-control me-1" type="text" id="campoBusqueda" placeholder="Encontrar empleado por cualquier dato...." oninput="buscarEmpleados()">
+
+            </div>
+            <div class="table-responsive mt-4">
+                <table class="table table-hover rounded-3 bg-white" id="dataTable">
+    <thead class="thead-dark">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Género</th>
+            <th>Fecha de Nacimiento</th>
+            <th>RFC</th>
+            <th>CURP</th>
+            <th>Domicilio</th>
+            <th>Código Postal</th>
+            <th>Ciudad</th>
+            <th>Estado</th>
+            <th>Teléfono</th>
+            <th>Fecha de Ingreso</th>
+            <th>Puesto</th>
+            <th>Salario Bruto Mensual</th>
+            <th>Email</th>
+            <th>Código Empleado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="foo">
+        <!-- Agrega filas de datos aquí -->
+    </tbody>
+</table>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">Detalles de Empleado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="row mb-2">
+                <div class="col-4 fw-bold">Foto:</div>
+                <div class="foto-container">
+                    <img id="imagenMostrada" src="" alt="Foto seleccionada">
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Nombre:</div>
+                    <div class="col-8" id="modalNombre" ></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Apellido Paterno:</div>
+                    <div class="col-8" id="modalApellidoPaterno"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Apellido Materno:</div>
+                    <div class="col-8" id="modalApellidoMaterno"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Género:</div>
+                    <div class="col-8" id="modalGenero"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Fecha de Nacimiento:</div>
+                    <div class="col-8" id="modalFechaNacimiento"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">RFC:</div>
+                    <div class="col-8" id="modalRFC"></div>
+                </div>
+                <div class="row mb-2" >
+                    <div class="col-4 fw-bold">CURP:</div>
+                    <div class="col-8" id="modalCURP"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Domicilio:</div>
+                    <div class="col-8" id="modalDomicilio"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Código Postal:</div>
+                    <div class="col-8" id="modalCodigoPostal"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Ciudad:</div>
+                    <div class="col-8" id="modalCiudad"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Estado:</div>
+                    <div class="col-8" id="modalEstado"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Teléfono:</div>
+                    <div class="col-8" id="modalTelefono"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Fecha de Ingreso:</div>
+                    <div class="col-8" id="modalFechaIngreso"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Puesto:</div>
+                    <div class="col-8" id="modalPuesto"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Salario Bruto Mensual:</div>
+                    <div class="col-8" id="modalSalarioBrutoMensual"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Email:</div>
+                    <div class="col-8" id="modalEmail"></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-4 fw-bold">Código Empleado:</div>
+                    <div class="col-8" id="modalCodigoEmpleado"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    
+
+

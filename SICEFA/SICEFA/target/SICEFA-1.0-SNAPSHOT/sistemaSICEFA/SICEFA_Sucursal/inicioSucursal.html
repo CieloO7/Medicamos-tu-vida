@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SICEFA Sucursal</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://kit.fontawesome.com/c9082f8e82.js" crossorigin="anonymous"></script>
+        <link href="../../Estilos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="Modulos/moduloEmpleado/controladorEmpleado.js" type="text/javascript"></script>
+        <script>var apikey = 'l7fuZFFzZaYKU2UyXDRluACPUQ-rYie2py_-4OgqGEM';</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <style>
+            .font{
+                font-size: 16px;
+                font-weight: 600;
+                color: #465080;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="bg-white border-bottom border-1 border-secondary-subtle fixed-top">
+                <div class="row">
+                    <div class="col-6 container-fluid py-2 px-4">
+                        <a class="navbar-brand justify-content-center align-items-center" href="#">
+                            <img src="../../Recursos/logoP.jpg" alt="Logo" width="160" height="35" class="d-inline-block align-text-top">          
+                        </a>
+                    </div>
+                    <div class="container-fluid col-6 py-3 px-4 text-sm-end">
+                        <label class="fw-bold d-inline-block mx-2" style="color:  #d13148;"><i class="fa-solid fa-circle-user"></i> Usuario</label>
+                        <div id="nomEmpleado" class="fw-semibold d-inline-block" style="color: #598cc4;">Juan Perez</div>
+                        <div id="codEmpleado" class="d-inline-block" style="color: #598cc4;"> 12345502</div>
+                    </div>
+                </div>
+            </div>
+        <div class="container-fluid ">
+            <div class="row">
+              <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar px-3 pt-4 border-end border-1 border-secondary-subtle">
+                <div class="position-sticky">
+                    <ul class="nav flex-column mt-5">
+                        <li class="nav-item">
+                          <a class="nav-link font mt-2" href="#"><i class="fas fa-clinic-medical"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link font mt-2 disable" href="#"><i class="fa-solid fa-cash-register"></i> Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font mt-2" onclick="cargarModuloClientes();"><i class="fa-solid fa-users"></i> Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link font mt-2" href="#"><i class="fa fas fa-tablets"></i> Productos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link font mt-2" href="#"><i class="fa-solid fa-list-check"></i> Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font mt-2" onclick="cargarModuloEmpleados()"><i class="fa-solid fa-building-user"></i> Empleados</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link font mt-2" href="#"><i class="fa-solid fa-right-to-bracket"></i> Salir</a>
+                        </li>
+                  </ul>
+                </div>
+              </nav>
+
+            <div class="col-md-9 ms-sm-auto col-lg-10 container-fluid d-flex justify-content-center align-content-center my-1" id="contenedorPrincipal">
+                <div class="row py-5" style="text-align: justify;">
+                    <div class="col-12 ">
+                        <h1 class="text-center py-3" style="color:#2c5a8d;">Medicamos tu vida</h1>
+                        <h5 class="text-center pb-2" style="color:#d13148;">SICEFA Sucursal</h5>
+                        <p class="px-3">
+                            Medicamos tu Vida es una farmacia de medicamentos comprometida con brindar soluciones de salud a
+                            nuestros clientes. Nos especializamos en ofrecer una amplia variedad de productos farmacéuticos
+                            de calidad, asesoramiento profesional y un servicio excepcional. Nuestro objetivo es mejorar la
+                            calidad de vida de las personas proporcionando acceso fácil y seguro a los medicamentos que
+                            necesitan.
+                        </p>
+                    </div>
+                    <div class="row mt-3 p-3">
+                        <div class="col-sm-4">
+                            <center><img class="rounded" src="../Recursos/Mision.png" width="230" height="219"></center>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 style="color: #1d4161;">Nuestra Mision</h3>
+                                <ul class="">
+                                    <li>Proveer medicamentos de alta calidad y eficacia para mejorar la salud y bienestar de
+                                        nuestros clientes.</li>
+                                    <li>Garantizar un servicio al cliente excepcional, brindando asesoría y apoyo en el
+                                        tratamiento de enfermedades.</li>
+                                    <li>Innovar constantemente para ofrecer soluciones médicas avanzadas y asequibles.</li>
+                                    <li>Promover la responsabilidad social y el cuidado del medio ambiente en todas nuestras
+                                        operaciones.</li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-sm-4">
+                            <center><img class="rounded" src="../Recursos/Vision.jpg" width="230" height="219"></center>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 style="color:#1d4161;">Nuestra Vision</h3>
+                                <ul class="puntos-lista">
+                                    <li>Ser líderes en el mercado de medicamentos, reconocidos por nuestra excelencia y
+                                        compromiso con la salud.</li>
+                                    <li>Expandir nuestra presencia a nivel nacional e internacional, llegando a más personas con
+                                        nuestros productos.</li>
+                                    <li>Invertir en investigación y desarrollo para seguir ofreciendo soluciones innovadoras.
+                                    </li>
+                                    <li>Contribuir al desarrollo sostenible de la sociedad a través de programas de
+                                        responsabilidad social.</li>
+                                </ul>
+                        </div>
+                    </div>
+                     <div class="row p-3">
+                        <div class="col-sm-4">
+                            <center><img class="rounded" src="../Recursos/Valores.jpg" width="230" height="219"></center>
+                        </div>
+                        <div class="col-sm-8">
+                            <h3 style="color: #1d4161;">Nuestros Valores</h3>
+                                <ul class="puntos-lista">
+                                    <li>Integridad y ética en todas nuestras acciones.</li>
+                                    <li>Calidad y excelencia en nuestros productos y servicios.</li>
+                                    <li>Compromiso con la salud y bienestar de nuestros clientes.</li>
+                                    <li>Innovación y mejora continua.</li>
+                                    <li>Trabajo en equipo y colaboración.</li>
+                                </ul>
+                        </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+          </div>
+            
+    
+        <footer class="container-fluid text-center mt-2 py-3 border-top border-light-subtle" style="background-color: #346aae;">
+            <div class="row mt-0">
+                <div class="col-lg-12 col-sm-12 text-center" style="color: white;">
+                    <p >&COPY; 2023 Medicamos tu vida. Todos los derechos reservados. Sistema Sucursal</p>
+                    <p>Desarrollado por &COPY; BaseCode 2023</p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/inicioSucursal.js" type="text/javascript"></script>
+        <script src="../../Estilos/js/bootstrap.bundle.js" type="text/javascript"></script>
+        <script src="../../Estilos/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    </body>
+</html>

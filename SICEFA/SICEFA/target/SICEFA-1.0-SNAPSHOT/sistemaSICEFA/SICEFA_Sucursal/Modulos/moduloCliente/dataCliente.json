@@ -1,0 +1,19 @@
+[
+  {
+    "numCliente":"C000001",
+    "nom": "Venta Al Cliente",
+    "apeP": "",
+    "apeM": "ApellidoMaterno1",
+    "gen": "Otro",
+    "fechNac": "1990-01-01",
+    "domic": "Dirección",
+    "codPos": "12345",
+    "ciu": "Ciudad",
+    "esta": "Estado",
+    "curp": "CURP",
+    "rfc": "RFC",
+    "numTel": "1234567890",
+    "correo": "correo1@example.com",
+    "estatus":"1"
+  }
+]

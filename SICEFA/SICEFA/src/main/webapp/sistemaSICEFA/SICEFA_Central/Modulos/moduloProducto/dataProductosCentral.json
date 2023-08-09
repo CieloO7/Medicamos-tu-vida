@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Naproxeno",
+        "nombreGen": "Altalgin",
+        "formaFar": "Comprimidos",
+        "unidadMed": "mg",
+        "presentacion": "Pastillas",
+        "indicacion": "Dolores leves a moderados",
+        "contraInd": "No tomar con alcohol",
+        "concent": "550 mg",
+        "envase": 25,
+        "precioUnit": 75,
+        "codigoBarras": 65433445,
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "Paracetamol",
+        "nombreGen": "Acetaminofén",
+        "formaFar": "Tabletas",
+        "unidadMed": "mg",
+        "presentacion": "Caja",
+        "indicacion": "Fiebre y dolor",
+        "contraInd": "No exceder la dosis recomendada",
+        "concent": "500 mg",
+        "envase": 20,
+        "precioUnit": 50,
+        "codigoBarras": 69876545,
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "Loratadina",
+        "nombreGen": "Loratadina",
+        "formaFar": "Tabletas",
+        "unidadMed": "mg",
+        "presentacion": "Blíster",
+        "indicacion": "Alergias",
+        "contraInd": "Consultar con un médico en caso de embarazo",
+        "concent": "10 mg",
+        "envase": 10,
+        "precioUnit": 30,
+        "codigoBarras": 8982938,
+        "estatus": "Inactivo"
+    },
+    {
+        "nombre": "Ibuprofeno",
+        "nombreGen": "Ibuprofeno",
+        "formaFar": "Cápsulas",
+        "unidadMed": "mg",
+        "presentacion": "Frasco",
+        "indicacion": "Dolor e inflamación",
+        "contraInd": "No tomar con problemas estomacales",
+        "concent": "400 mg",
+        "envase": 30,
+        "precioUnit": 60,
+        "codigoBarras": 78598402,
+        "estatus": "Activo"
+    }
+]

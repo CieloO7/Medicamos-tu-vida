@@ -1,0 +1,134 @@
+<!-- Cliente -->
+
+<div class="container-fluid row d-flex justify-content-md-center rounded-4 mt-3" style="background-color: #b0c6dd;">
+    <link href="../../../../Estilos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <div class="mt-2">
+        <div class="rounded-3 my-3 px-3 py-4">
+            <div class="mx-3 px-3 py-4 rounded-4 bg-white">
+            <form id="formularioCliente">    
+                <h4 class="text-center">Clientes</h4>
+                <div class="px-4 py-2 my-2 rounded-4">
+                <h6 class="py-2">Información Personal</h6>
+                    <div class="row g-3">
+                        <div class="mb-2 col-md-6">
+                            <label for="txtNumUnico" class="mt-2 ">Número de cliente: </label>
+                            <input id="txtNumUnico" type="text"  readonly class="form-control" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="txtFechRegistro" class="mt-2 ">Fecha de registro: </label>
+                            <input id="txtFechRegistro" type="text"  readonly class="form-control" required>
+                        </div>
+                        <div class="mb-2 col-md-4">
+                            <label for="txtNombre" class="mt-2">Nombre(s):</label>
+                            <input type="text" class="form-control" id="txtNombre" required>
+                        </div>
+                        <div class="mb-2 col-md-4">   
+                            <label for="txtApeP" class="mt-2">Apellido Paterno:</label>
+                            <input type="text" class="form-control" id="txtApeP" required>
+                        </div>
+                        <div class="mb-2 col-md-4">
+                            <label for="txtApeM" class="mt-2">Apellido Materno:</label>
+                            <input type="text" class="form-control" id="txtApeM" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="secGenero" class="mt-2" id="rbtGenero">Genero:</label>
+                                <select id="secGenero" class="form-select" required>
+                                    <option value="M">Mujer</option>
+                                    <option value="F">Hombre</option>
+                                </select>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="dateNacimiento" class="mt-2">Fecha de nacimiento:</label>
+                            <input type="date" class="form-control w-50" id="dateNacimiento" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="txtDomicilio" class="mt-2">Domicilio:</label>
+                            <input type="text" class="form-control" id="txtDomicilio" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="numCodPostal" class="mt-2">Codigo postal:</label>
+                            <input type="text" class="form-control" id="numCodPostal" required pattern="{5,9}">
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="txtCiudad" class="mt-2">Ciudad:</label>
+                            <input type="text" class="form-control" id="txtCiudad" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="txtEstado" class="mt-2">Estado:</label>
+                            <input type="text" class="form-control" id="txtEstado" required>
+                        </div>
+                        <div class="mb-2 col-md-6">
+                            <label for="fileFoto" class="mt-2">Foto:</label>
+                            <input type="file" class="form-control" id="fileFoto">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 py-2 my-2 rounded-4">
+                    <h6 class="py-2">Información de identificación</h6>
+                        <div class="row g-2">
+                            <div class="mb-2 col-md-6">
+                                <label for="txtCurp" class="mt-2">CURP:</label>
+                                <input type="text" class="form-control" id="txtCurp" required pattern=".{18,18}">
+                            </div>
+                            <div class="mb-2 col-md-6">
+                                <label for="txtRfc" class="mt-2">RFC:</label>
+                                <input type="text" class="form-control" id="txtRfc" required pattern=".{12,13}">
+                            </div>
+                        </div>
+                </div>
+                <div class="px-4 py-2 my-1 rounded-4">
+                    <h6 class="py-2">Información de contacto</h6>
+                        <div class="row g-2">
+                            <div class="mb-2 col-md-6">
+                                <label for="numTel" class="mt-2">Número telefonico:</label>
+                                <input type="tel" class="form-control" id="numTel" required pattern=".{8,10}">
+                            </div>
+                            <div class="mb-2 col-md-6">
+                                <label for="txtEmail" class="mt-2">Correo Electronico:</label>
+                                <input type="email" class="form-control" id="txtEmail" required>
+                            </div>
+                        </div>
+                </div>
+            </form>    
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-4 pb-5 my-2">
+                    <button type="button" class="btn btn-outline-primary px-4 mx-2" id="btnNuevo" onclick="moduloCliente.nuevo();"><i class="fas fa-user-plus"></i> Nuevo</button>
+                    <button type="button" class="btn btn-outline-success px-4 mx-2" id="btnGuardar" onclick="moduloCliente.validarFormulario();"><i class="fas fa-save"></i> Guardar</button>
+                    <button type="button" class="btn btn-outline-warning px-4 mx-2" id="btnModificar" onclick="moduloCliente.modificarCliente();"><i class="fas fa-edit"></i> Actualizar</button>
+                    <button type="button" class="btn btn-outline-danger px-4 mx-2" id="btnEliminar" onclick="moduloCliente.eliminarCliente();"><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
+                </div>
+                    <div class="py-2 px-3">
+                        <div class="mb-3 row">
+                            <div class="col-md-6" role="search">
+                                <label for="inputCliente" class="col-form-label fw-semibold">Buscar cliente</label>
+                                <input class="form-control me-2" type="search" placeholder="Buscar..." id="inputCliente" onkeyup="moduloCliente.filtrarCliente();">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="secFiltro" class="col-form-label fw-semibold">Filtrar clientes por:</label>
+                                <select id="secFiltro" class="form-select" onchange="moduloCliente.filtrarCliente();">
+                                    <option value="2">Todos</option>
+                                    <option value="1">Activos</option>
+                                    <option value="0">Inactivos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover rounded-3 bg-white">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Codigo</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">Teléfono Movil</th>
+                                        <th scope="col">Correo electronico</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblClientes" class="border-top border-light-subtle">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+</div>

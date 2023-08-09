@@ -1,0 +1,149 @@
+
+<div onload="moduloSucursal.initializePage();" style="background-color: #f9ddda">
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initializePage" async defer></script>
+    <script src="Modulos/moduloProducto/controladorProductosCentral.js" type="text/javascript"></script>
+    <div class="container-fluid my-3 px-4 py-2">
+        <div class="row">
+            <div class="mt-3 rounded-3 py-5" >
+                <div class=" mt-2">
+                    <div class="rounded-3 my-3 px-3 py-4">
+                        <div class="mx-3 px-3 py-4 rounded-4 bg-white">
+                            <!-- Formulario de registro de sucursales -->
+                            <div class="row">
+
+                                <h4 class="text-center" style="color: #000000">Sucursales</h4>
+
+                                <div class="col-md-6">
+                                    <form id="sucursalForm">
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label for="usuario" class="mt-2">Usuario</label>
+                                            <input type="text" class="form-control" id="usuario" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nombre1" class="mt-2">Nombre de la Sucursal</label>
+                                            <input type="text" id="nombre1" name="nombre" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="titular1" class="mt-2">Titular</label>
+                                            <input type="text" id="titular1" name="titular" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="rfc1" class="mt-2">RFC</label>
+                                            <input type="text" id="rfc1" name="rfc" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ciudad1" class="mt-2">Ciudad</label>
+                                            <input type="text" id="ciudad1" name="ciudad" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="colonia1" class="mt-2">Colonia</label>
+                                            <input type="text" id="colonia1" name="colonia" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="estado1" class="mt-2">Estado</label>
+                                            <input type="text" id="estado1" name="estado" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <br><br>
+                                        <label for="codigo-postal1" class="mt-2">Código Póstal</label>
+                                        <input type="text" id="codigo-postal1" name="codigo-postal"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono1" class="mt-2">Télefono</label>
+                                        <input type="text" id="telefono1" name="telefono" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="longitud1" class="mt-2">Longitud</label>
+                                        <input type="text" id="longitud1" name="longitud" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="latitud1" class="mt-2">Latitud</label>
+                                        <input type="text" id="latitud1" name="latitud" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-4 pb-5 my-2">
+                                    <button type="button" class="btn btn-outline-primary px-4 mx-2" id="btnNuevo"
+                                        onclick="moduloSucursal.clean();"><i class="fas fa-user-plus"></i> Nuevo</button>
+                                    <button type="button" class="btn btn-outline-success px-4 mx-2" id="btnGuardar"
+                                        onclick="moduloSucursal.addSucursal();"><i class="fas fa-save"></i> Guardar</button>
+                                    <button type="button" class="btn btn-outline-danger px-4 mx-2" id="btnModificar"
+                                        onclick="moduloSucursal.updateSucursal();">
+                                        <i class="fas fa-edit"></i> Modificar
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-2 px-3">
+                            <div class="mb-3 row">
+                                <div class="col-md-6" role="search">
+                                    <div class="form-group">
+                                        <label for="inputBuscar" class="fw-bold">Buscar por cualquier campo:</label>
+                                        <input type="text" id="inputBuscar" class="form-control"
+                                            onkeyup="moduloSucursal.filterSucursales()">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="filtroSucursales" class="fw-bold">Filtrar por estatus:</label>
+                                        <select class="form-select form-select-sm" id="filtroSucursales"
+                                            onchange="moduloSucursal.filterSucursales()">
+                                            <option value="Todos">Todos</option>
+                                            <option value="Activo">Activos</option>
+                                            <option value="Inactivo">Inactivos</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover rounded-3 bg-white" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Titular</th>
+                                            <th>RFC titular</th>
+                                            <th>Código Póstal</th>
+                                            <th>Télefono</th>
+                                            <th>Estatus</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dataTableBody" class="border-top border-light-subtle">
+                                        <!-- Aquí se cargan las filas de la tabla dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de ubicación -->
+    <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Ubicación de la sucursal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../moduloSucursal/ScriptSuc.js" type="text/javascript"></script>

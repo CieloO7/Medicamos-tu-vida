@@ -1,0 +1,45 @@
+    [
+    {
+        "nombre": "Vicente",
+        "apellidoPaterno": "Gómez",
+        "apellidoMaterno": "Aguiar",
+        "genero": "Masculino",
+        "fechaNacimiento": "2004-03-18",
+        "RFC": "PERJ900515ABC",
+        "CURP": "GOAA040318HGTMGNA9",
+        "foto": "vicente.jpg",
+        "domicilio": "Av. Reforma #123",
+        "codigoPostal": "12345",
+        "ciudad": "Ciudad de Mexico",
+        "estado": "Ciudad de Mexico",
+        "telefono": "4774834787",
+        "fechaIngreso": "2020-01-15",
+        "puesto": "Gerente",
+        "salarioBrutoMensual": "30000",
+        "email": "Vicengomez571@gmail.com",
+        "codigoEmpleado": "2008001",
+        "estatus": "Activo"
+    },
+    {
+        "nombre": "Fatima de la luz",
+        "apellidoPaterno": "Gómez",
+        "apellidoMaterno": "Aguiar",
+        "genero": "Femenino",
+        "fechaNacimiento": "2005-05-21",
+        "RFC": "LOMR851025XYZ",
+        "CURP": "GOAF010530MGTMGTA2",
+        "foto": "vale.jpg",
+        "domicilio": "Calle Juarez #456",
+        "codigoPostal": "54321",
+        "ciudad": "Guadalajara",
+        "estado": "Jalisco",
+        "telefono": "4773128422",
+        "fechaIngreso": "2018-06-20",
+        "puesto": "Supervisor",
+        "salarioBrutoMensual": "25000",
+        "email": "Valeria@gmail.com",
+        "codigoEmpleado": "1808001",
+        "estatus": "Activo"
+    }
+]
+

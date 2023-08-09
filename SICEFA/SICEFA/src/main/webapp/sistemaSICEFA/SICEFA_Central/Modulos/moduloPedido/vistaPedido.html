@@ -1,0 +1,90 @@
+<div class="container-fluid my-3 row d-flex justify-content-md-center" style="background-color: #f9ddda">
+    <div class="mt-2">
+        <div class="rounded-3 py-4 px-3 my-3">
+            <div class="mx-3 px-3 py-2 bg-white rounded-4">
+                <div class="px-4 py-2 my-2 rounded-4">
+                <h4 class="text-center">Pedido</h4>
+                <div class="row g-3">
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Numero de Pedido: </label>
+                        <input class="form-control" type="text"  id="txtNumUnico">
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtFech" class="mt-2 ">Fecha: </label>
+                        <input class="form-control" type="text"  id="txtFech">
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Hora: </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Sucursal: </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Empleado: </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Código Postal: </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Ciudad </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Estado </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                    <div class="mb-2 col-md-6">
+                        <label for="txtNumUnico" class="mt-2 ">Total del Pedido </label>
+                        <input class="form-control" type="text"  >
+                    </div>
+                   <div class="mb-2 col-md-6">
+                        <label for="secEstatus" class="mt-2">Estatus:</label>
+                        <select id="secEstatus" class="form-select">
+                            <option value="M">Pendiente</option>
+                            <option value="F">Atendida</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="txtNumUnico" class="mt-2 ">Producto: </label>
+                         <input type="text" class="form-control" id="mi-elemento">
+                    </div>
+                    <div class="mb-2 col-md-6">
+                    </div>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center pt-4 pb-5 my-2">
+                    <button type="button" class="btn btn-outline-success px-4 mx-2" id="btnGuardar" onclick=""><i class="fas fa-check-circle"></i> Atender</button>
+                    <button type="button" class="btn btn-outline-danger px-4 mx-2" id="btnEliminar" onclick=""><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
+            </div>
+        </div>
+                </div>       
+                    <div class="table-responsive table-striped table-hover bg-white rounded-3 mb-5">
+                        <table class="table ">
+                            <th scope="col">#</th>
+                            <th scope="col">Sucursal</th>
+                            <th scope="col">Empleado</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Monto</th>
+                            <tbody id="tb1Clientes">  
+                                <th scope="row">1</th>
+                            <td>León</td>
+                            <td>Juan Perez</td>
+                            <td> 06/08/2023</td>
+                            <td> 13:20</td>
+                            <td>Paracetamol</td>
+                            <td> Atendida</td>
+                            <td> $ 200</td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

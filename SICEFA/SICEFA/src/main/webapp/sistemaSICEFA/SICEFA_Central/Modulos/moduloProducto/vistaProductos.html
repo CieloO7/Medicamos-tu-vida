@@ -1,0 +1,131 @@
+
+<div class="container-fluid mt-3 row d-flex justify-content-md-center" style="background-color: #f9ddda">
+    <div class="mt-2">
+        <div class="rounded-3 my-3 px-3 py-4">
+            <div class="mx-3 px-3 py-4 bg-white rounded-4">
+                <!-- Formulario de registro de productos -->
+                <h5 class="text-center">Productos</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form id="productoForm">
+                            <label for="nombre" class="label-grande">Registro de Productos</label>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="nombre1" class="mt-2">Nombre</label>
+                                <input type="text" id="nombre1" name="nombre" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreGen1" class="mt-2">Nombre Génerico</label>
+                                <input type="text" id="nombreGen1" name="nombreGen" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="formaFar1" class="mt-2">Forma Farmacéutica</label>
+                                <input type="text" id="formaFar1" name="formaFar" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="unidadMed1" class="mt-2">Unidad de Medida</label>
+                                <input type="text" id="unidadMed1" name="unidadMed" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="presentacion1" class="mt-2">Presentación</label>
+                                <input type="text" id="presentacion1" name="presentacion" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="indicacion1" class="mt-2">Principal Indicación</label>
+                                <input type="text" id="indicacion1" name="indicacion" class="form-control">
+                            </div>
+                            <div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <br><br>
+                            <label for="contraInd1" class="mt-2">Contraindicaciones</label>
+                            <input type="text" id="contraInd1" name="contraInd" class="form-control ">
+                        </div>
+                        <div class="form-group">
+                            <label for="concent1" class="mt-2">Concentración</label>
+                            <input type="text" id="concent1" name="concent" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="envase1" class="mt-2">Unidades/Envase</label>
+                            <input type="number" id="envase1" name="envase" class="form-control ">
+                        </div>
+                        <div class="form-group">
+                            <label for="precioUnit1" class="mt-2">Precio Unitario</label>
+                            <input type="number" id="precioUnit1" name="precioUnit" class="form-control">
+
+                            <div class="form-group">
+                                <label for="codigoBarras1" class="mt-2">Código de Barras</label>
+                                <input type="number" id="codigoBarras1" name="codigoBarras" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="imgMedicamento" class="fw-bold">Imagen Medicamento</label>
+                            <input type="file" id="imgMedicamento" name="imgMedicamento" class="form-control">
+                            <p id="selectedFileName" class="small text-muted mt-2">Archivo seleccionado:</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="container text-center">
+                    <div class="d-inline-block px-3">
+                        <button type="button" class="btn btn-outline-primary px-4 mx-2" id="btnNuevo" onclick="clean()">
+                            <i class="fas fa-user-plus"></i> Nuevo</button>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <button type="button" class="btn btn-outline-success px-4 mx-2" id="btnNuevo"
+                            onclick="addProducto()"><i class="fas fa-save"></i> Guardar</button>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <button type="button" class="btn btn-outline-warning px-4 mx-2" id="btnModificar"
+                            onclick="updateProducto()"><i class="fas fa-edit"></i> Modificar</button>
+                    </div>
+                    <div class="d-inline-block px-3">
+                        <button type="button" class="btn btn-outline-danger px-4 mx-2" id="btnEliminar"
+                            onclick="changeEstatus(indexProductoSeleccionado)"><i class="fas fa-trash"></i>
+                            Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Tabla de productos -->
+            <div class="mx-3 py-4 table-responsive">
+                <div class="container py-4">
+                    <label for="filterProductos" class="fw-bold">Filtrar por estatus:</label>
+                    <select id="filterProductos" class="form-select form-select-sm" onchange="filterProductos()">
+                        <option value="Todos">Todos</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                        
+                    </select>
+                </div>
+                <table class="table table-striped table-hover bg-white rounded-3" id="dataTable">
+                    <thead class="font">
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Nombre Genérico</th>
+                            <th scope="col">Presentación</th>
+                            <th scope="col">Unidades/Envase</th>
+                            <th scope="col">Precio Unitario</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Estatus</th>
+                        </tr>
+
+                    </thead>
+                    <tbody class="foo">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-3W1b1Qn4EwlE2eqf5d8u/IZVk4L3o3/2Pi2szJfU40KLc6rqBnjzBfukJw6eWgB6"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+<script src="Modulos/moduloProducto/controladorProductosCentral.js" type="text/javascript"></script>

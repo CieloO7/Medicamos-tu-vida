@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login Sucursal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="loginSistema.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/c9082f8e82.js" crossorigin="anonymous"></script>
+        <link href="../../Estilos/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <div class="container-fluid vh-100 d-flex flex-column justify-content-start py-5">
+            <center class="py-3">
+                <div class="row align-items-center py-5">
+                    <div class="col">
+                        <img src="../../Recursos/logoP.jpg" alt="Medicamos tu vida" class="img-fluid"/>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3 mx-5">
+                    <form>
+                        <h4 style="color:#242946;">Bienvenido a SICEFA Sucursal</h4>
+                        
+                        <div class="py-3">
+                            <label for="txtUsuario" class="fw-semibold pb-1">Usuario</label>
+                            <input type="text" class="form-control" id="txtUsuario" placeholder="Ingrese su usuario">
+                        </div>
+                        <div class="py-3">
+                            <label for="txtContrasena" class="fw-semibold pb-1">Contraseña</label>
+                            <input type="password" class="form-control" id="txtContrasena" placeholder="Ingrese su contraseña">
+                        </div>
+                    </form>
+                    <div>
+                        <button id="accederSucursal" onclick="validarLoginSucursal();" class="btn btn-outline-success px-4 my-2"><i class="fas fa-sign-in-alt"></i> Acceder</button>
+                    </div>
+                    <div>
+                        <button id="regresarSucursal" onclick="regresarCentral();" class="btn btn-outline-primary px-4 my-2"><i class="fas fa-clinic-medical"></i> Acceder a SICEFA Central</button>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    </body>
+</html>

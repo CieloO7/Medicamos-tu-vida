@@ -1,0 +1,93 @@
+
+<div class="container-fluid row d-flex justify-content-md-center rounded-4 mt-3" style="background-color: #b0c6dd;">
+    <script src="controladorProductos.js"></script>
+    <div class="mt-2">
+        <div class="rounded-3 my-3 px-3 py-4">
+            <div class="mx-3 px-3 py-4 bg-white rounded-4">
+                <form id="productoForm">
+                    <h4 class="text-center">Productos</h4>
+                    <div class="px-4 py-2- my-2 rounded-4">
+                        <div class="row g-3">
+                            <div class="form-group  col-md-6">
+                                <label for="nombre1" class="mt-2">Nombre:</label>
+                                <input id="nombre1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="nombreGen1" class="mt-2">Nombre Génerico:</label>
+                                <input id="nombreGen1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="formaFar1" class="mt-2">Forma Farmacéutica:</label>
+                                <input id="formaFar1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="unidadMed1" class="mt-2">Unidad de Medida:</label>
+                                <input id="unidadMed1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="presentacion1" class="mt-2">Presentación:</label>
+                                <input id="presentacion1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="indicacion1" class="mt-2">Principal Indicación:</label>
+                                <input id="indicacion1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <br>
+                                <label for="contraInd1" class="mt-2">Contraindicaciones:</label>
+                                <input id="contraInd1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="concent1" class="mt-2">Concentración:</label>
+                                <input id="concent1" type="text" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="envase1" class="mt-2">Unidades por envase:</label>
+                                <input id="envase1" type="number" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="precioUnit1" class="mt-2">Precio Unitario:</label>
+                                <input id="precioUnit1" type="number" readonly class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="codigoBarras1" class="mt-2">Código de Barras:</label>
+                                <input id="codigoBarras1" type="number" readonly class="form-control">
+                            </div>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+                <!-- Tabla de productos -->
+                <div class="mx-3 py-4 ">
+                    <div class="container my-3">
+                        <label for="filterProductos" class="fw-bold">Filtrar por estatus:</label>
+                        <select id="filterProductos" class="form-select form-select-sm" onchange="filterProductos();">
+                            <option value="Todos">Todos</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                    <table class="table table-striped table-hover bg-white rounded-3" id="dataTable">
+                        <thead class="font">
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Nombre Genérico</th>
+                                <th scope="col">Presentación</th>
+                                <th scope="col">Unidades/Envase</th>
+                                <th scope="col">Precio Unitario</th>
+                                <th scope="col">Foto</th>
+                                <th scope="col">Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="foo">
+
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

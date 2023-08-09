@@ -1,0 +1,61 @@
+[
+    {
+        "id": "S00001",
+        "nombre": "Central",
+        "titular": "TITULAR SUCURSAL 1",
+        "rfc": "RFC SUCURSAL 1",
+        "ciudad": "Leon",
+        "colonia": "Futurama Monterrey",
+        "estado": "Guanajuato",
+        "codigoPostal": "37180",
+        "telefono": "477 890 4533",
+        "longitud": "-101.2872",
+        "latitud": "20.7811",
+        "estatus": "Activo"
+    },
+    
+    {
+        "id": "S00002",
+        "nombre": "Centro",
+        "titular": "TITULAR SUCURSAL 2",
+        "rfc": "RFC SUCURSAL 2",
+        "ciudad": "Leon",
+        "colonia": "Centro",
+        "estado": "Guanajuato",
+        "codigoPostal": "37000",
+        "telefono": "477 104 5678",
+        "longitud": "-101.67374",
+        "latitud": "21.12908",
+        "estatus": "Activo"
+    },
+    
+    {
+        "id": "S00003",
+        "nombre": "Centro Max",
+        "titular": "TITULAR SUCURSAL 3",
+        "rfc": "RFC SUCURSAL 3",
+        "ciudad": "Leon",
+        "colonia": "Jardines de Jerez",
+        "estado": "Guanajuato",
+        "codigoPostal": "37530",
+        "telefono": "477 771 7361",
+        "longitud": "-101.635549320748",
+        "latitud": "21.0994063",
+        "estatus": "Activo"
+    },
+    
+    {
+        "id": "S00004",
+        "nombre": "Plaza Mayor",
+        "titular": "TITULAR SUCURSAL 4",
+        "rfc": "RFC SUCURSAL 4",
+        "ciudad": "Leon",
+        "colonia": "Valle del Campestre",
+        "estado": "Guanajuato",
+        "codigoPostal": "37150",
+        "telefono": "477 773 4916",
+        "longitud": "-5.66405564465187",
+        "latitud": "40.9650282",
+        "estatus": "Activo"
+    }
+]
